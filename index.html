@@ -1,112 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Bangalore Dynamic Parking Solutions</title>
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        font-family: Arial, sans-serif;
-      }
-
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-
-      h1 {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 30px;
-      }
-
-      input {
-        padding: 10px;
-        margin-bottom: 10px;
-        width: 100%;
-        border-radius: 5px;
-        border: 1px solid gray;
-      }
-
-      button {
-        padding: 10px 20px;
-        background-color: #3f51b5;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1.1rem;
-        transition: background-color 0.3s ease;
-      }
-
-      button:hover {
-        background-color: #303f9f;
-      }
-
-      p.success {
-        color: green;
-        margin-top: 20px;
-        text-align: center;
-      }
-
-      p.error {
-        color: red;
-        margin-top: 20px;
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Bangalore Dynamic Parking Solutions</h1>
-      <form id="emailForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <button type="submit">Mail me</button>
-      </form>
-      <p id="successMsg" class="success"></p>
-      <p id="errorMsg" class="error"></p>
+<head>
+	<title>Dynamic Parking Pricing - BDPS</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		h1 {
+			text-align: center;
+			font-size: 2.5em;
+			margin-top: 0;
+		}
+		p {
+			font-size: 1.2em;
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+		form {
+			background-color: #f9f9f9;
+			border: 1px solid #ddd;
+			padding: 20px;
+			margin-top: 40px;
+		}
+		input[type="text"],
+		input[type="email"] {
+			padding: 10px;
+			width: 100%;
+			margin-bottom: 10px;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			font-size: 1.1em;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 1.1em;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Dynamic Parking Pricing - BDPS</h1>
+		<p>A parking lot is a dedicated area that is intended for parking vehicles. Obviously, Duh!! It’s a good way to make some monies!. Spanning across the street, shopping malls, stadiums, airports, train stations, there are everywhere. Spread over large open areas or stacked to form a multi-storied building, temporarily holding your prized possessions have become a part of our modern society. As the sale of cars keeps growing, so will be the need to park these somewhere. With the proliferation of electric vehicles now, there is another type of vehicle that these parking lots need to cater to. When we go to a mall, or an airport we usually find the parking experience to be simple. Find an open slot, park. Once you are back, drive out, pay the charges and drive away. But with the variations of vehicle types that are increasing in India today, the algorithms that run behind large parking systems can get fairly complex. Also with the demand peaking in certain areas like Bangalore & Mumbai, it’s not far that as a country we might move to dynamic pricing on vehicular movement in the city.</p>
+		<p>Bangalore Dynamic Parking Solutions (BDPS) is a privately run enterprise. Started in 2001, as a small cab rental company by Mr. Sridhar Rao, saw an early opportunity in the rapid urbanization in the city fuelled by technology companies. Initially his company used to manage and operate about 500 parking spaces in the city. Today they manage around 6000 spots daily. With the Bangalore city traffic burgeoning daily, Mr Rao is exploring an option of dynamic parking pricing. Dynamic pricing can be used to maximise revenue and make the unorganised parking industry more efficient. Modern technology offers a number of ways in which car
+</div>
+        <div class="form-container">
+          <form action="https://api.sahaj.ai/curious" method="POST">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <button type="submit" class="btn-submit">Sounds interesting, email me!</button>
+          </form>
+        </div>
+      </div>
     </div>
-
-    <script>
-      const form = document.getElementById("emailForm");
-      const successMsg = document.getElementById("successMsg");
-      const errorMsg = document.getElementById("errorMsg");
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const formData = new FormData(form);
-        fetch("https://api.sahaj.ai/curious", {
-          method: "POST",
-          body: formData,
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.status === "success") {
-              successMsg.textContent = "Email sent successfully!";
-              errorMsg.textContent = "";
-              form.reset();
-            } else {
-              errorMsg.textContent = "Oops! Something went wrong.";
-              successMsg.textContent = "";
-            }
-          })
-          .catch((error) => console.log(error));
-      });
-    </script>
   </body>
 </html>
