@@ -36,20 +36,29 @@
 			margin-bottom: 10px;
 			border: 1px solid #ddd;
 			border-radius: 5px;
-			font-size: 1.1em;
+			font-size: 2.5em;
+			width: 100%;
 		}
 		input[type="submit"] {
 			background-color: #4CAF50;
 			color: white;
-			padding: 10px 20px;
+			padding: 20px 20px;
 			border: none;
 			border-radius: 5px;
-			font-size: 1.1em;
+			
 			cursor: pointer;
 			transition: background-color 0.3s ease;
 		}
 		input[type="submit"]:hover {
 			background-color: #3e8e41;
+		}
+		.btn-submit{
+			padding: 20px;
+			font-size: 2.5em;
+		}
+		.row{
+			display: flex;
+			height: 80px;
 		}
 	</style>
 </head>
@@ -59,19 +68,21 @@
 		<p>A parking lot is a dedicated area that is intended for parking vehicles. Obviously, Duh!! It’s a good way to make some monies!. Spanning across the street, shopping malls, stadiums, airports, train stations, there are everywhere. Spread over large open areas or stacked to form a multi-storied building, temporarily holding your prized possessions have become a part of our modern society. As the sale of cars keeps growing, so will be the need to park these somewhere. With the proliferation of electric vehicles now, there is another type of vehicle that these parking lots need to cater to. When we go to a mall, or an airport we usually find the parking experience to be simple. Find an open slot, park. Once you are back, drive out, pay the charges and drive away. But with the variations of vehicle types that are increasing in India today, the algorithms that run behind large parking systems can get fairly complex. Also with the demand peaking in certain areas like Bangalore & Mumbai, it’s not far that as a country we might move to dynamic pricing on vehicular movement in the city.</p>
 		<p>Bangalore Dynamic Parking Solutions (BDPS) is a privately run enterprise. Started in 2001, as a small cab rental company by Mr. Sridhar Rao, saw an early opportunity in the rapid urbanization in the city fuelled by technology companies. Initially his company used to manage and operate about 500 parking spaces in the city. Today they manage around 6000 spots daily. With the Bangalore city traffic burgeoning daily, Mr Rao is exploring an option of dynamic parking pricing. Dynamic pricing can be used to maximise revenue and make the unorganised parking industry more efficient. Modern technology offers a number of ways in which car park operators can more accurately ascertain future demand for their parking facilities and set appropriate prices in alignment with this. It is possible to modify pricing in real time through the use of parking sensors and software. These analyse the frequency of use of parking facilities and the availability of space. Through a strategy of dynamic pricing, car park operators can maximise revenue by charging a premium for parking when demand is at its highest. This then offsets potential losses during times of low demand for parking spaces. In addition, reduced fees during periods of low demand incentivise drivers to make use of vacant parking spaces. This, he believes, will also benefit customers and allow them to maintain transparency and fairness in pricing. It means that they are paying car parking charges based on the actual value of the space rather than an arbitrary static charge.</p>
 		<p>Would you be interested in solving this problem of dynamic parking pricing for this business who currently has around 35% market share in the city?</p>
-
+​
 </div>
         <div class="form-container">
           <form action="https://api.sahaj.ai/curious" method="POST">
             <div class="form-group">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required>
+              <!-- <label for="name">Name:</label> -->
+              <input type="text" id="name" name="name" required placeholder="Name">
             </div>
             <div class="form-group">
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required>
+              <!-- <label for="email">Email:</label> -->
+              <input type="email" id="email" name="email" required placeholder="email@example.com">
             </div>
+			<div class="row">
             <button type="submit" class="btn-submit">Sounds interesting, email me!</button>
+			</div>
           </form>
         </div>
       </div>
